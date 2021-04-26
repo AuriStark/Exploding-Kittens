@@ -1,0 +1,210 @@
+\chapter{Nicht-funktionale Anforderungen}
+
+\newcounter{nf}\setcounter{nf}{10}
+
+\section{Softwarearchitektur}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:sarch1}
+		\item [Name:] Client-Server Anwendung
+		\item [Beschreibung:] Das verteilte Spiele-System ermöglicht das gemeinsame Spielen von verschiedenen Rechnern aus.
+		\item [Motivation:] Aufgabestellung v. SEP/MP.
+		\item [Erfüllungskriterium:] Das fertige System besteht aus Client- und Server-Teilen.
+	\end{lhp}
+	
+	\begin{lhp}{nf}{NF}{nfunk:sarch2}
+		\item [Name:] Plattformunabhängigkeit
+		\item [Beschreibung:] Es soll sich um eine plattformunabhängige Anwendung handeln. Zumindest Windows- und Linuxsysteme sind zu unterstützen.
+		\item [Motivation:] Aufgabenstellung v. SEP/MP.
+		\item [Erfüllungskriterium:] Das fertige System basiert auf Java und ist dank der JVM
+		                             plattformunabhängige.
+	\end{lhp}
+\end{description}
+
+
+
+\section{Benutzerfreundlichkeit}
+
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:alter}
+		\item [Name:] Benutzeralter
+		\item [Beschreibung:] Das System ist für Benutzer geeignet, die älter als 5 Jahre sind.
+		\item [Motivation:] Jüngere Benutzer sind unfähig das Spiel zu spielen.
+		\item [Erfüllungskriterium:] Das System wird nur an Nutzer weitergegebn werden die älter als 5 Jahre sind.
+	\end{lhp}
+\end{description}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:keinetechniker}
+		\item [Name:] Technische Fähigkeiten
+		\item [Beschreibung:] Besondere technische Fähigkeiten sind von den Benutzern nicht zu erwarten.
+		\item [Motivation:] Auch die Menschen, die kaum etwas von Bedienung bzw. Programmierung von Rechnern verstehen, sollen fähig sein, das System zu verwenden.
+		\item [Erfüllungskriterium:] Das fertige System ist intuitiv bedienbar und besitzt eine verständliche
+		                             Benutzeroberfläche.
+	\end{lhp}
+\end{description}
+
+\section{Leistungsanforderungen}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:antwortzeit}
+		\item [Name:] Antwortzeit
+		\item [Beschreibung:] Maximale Antwortzeit für alle Systemprozesse.
+		\item [Motivation:] Das System muss immer brauchbar sein.
+		\item [Erfüllungskriterium:] Das System antwortet auf Benutzerhandlungen nie später als in 10 Sekunden.
+	\end{lhp}
+\end{description}
+
+\section{Anforderungen an Einsatzkontext}
+
+\subsection{Anforderungen an physische Umgebung}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel1}
+		\item [Name:] Lauffähigkeit an SCI-Rechnern
+		\item [Beschreibung:] Das Produkt muss auf einem eigenem Gerät lauffähig sein, welches zur Präsentation am Ende des SEPs genutzt werden muss. Falls keine eigenen Rechner vorhanden sind, stehen auch die SCI-Terminals zur verfügung.
+		\item [Motivation:] Optimierung von Betreuung und Abnahme des SEP/MP
+		\item [Erfüllungskriterium:] Das fertige System läuft auf jedem Rechner, der eine aktuelle Version von Java besitzt.
+	\end{lhp}
+\end{description}
+
+
+\subsection{Absatz- sowie Installationsbezogene Anforderungen}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel3}
+		\item [Name:] Installationsanleitung	
+		\item [Beschreibung:] Falls die Installation nicht lediglich das Öffnen einer Datei voraussetz, muss der genaue Installations- und Startvorgang schriftlich für Benutzer zur Verfügung gestellt werden.
+		\item [Motivation:] Spezifikation
+		\item [Erfüllungskriterium:] Die Installationshinweise sind sobald das Projekt fertig ist im GitLab zu finden
+	\end{lhp}
+\end{description}
+
+\subsection{Anforderungen an Versionierung}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel4}
+		\item [Name:] Keine weitere Versionen
+		\item [Beschreibung:] Nach Version 1.0 ist keine weitere Entwicklung vorgesehen.
+		\item [Motivation:] Das ist nur das SEP/MP, kein Geschäftsprojekt, siehe \ref{fa:fortentwicklung}
+		\item [Erfüllungskriterium:] Kein Mitglied der Gruppe wird das Projekt nach Beendigung weiterentwickeln.
+	\end{lhp}
+\end{description}
+
+\section{Anforderungen an Wartung und Unterstützung}
+
+\subsection{Wartungsanforderungen}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:doku}
+		\item [Name:] Dokumentation
+		\item [Beschreibung:] Der Quellcode muss ausführlich dokumentiert werden.
+		\item [Motivation:] Es ist leichter den Code von anderen (besonders in der Zukunft) zu verstehen.
+		\item [Erfüllungskriterium:] JavaDoc 
+	\end{lhp}
+\end{description}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:testen}
+		\item [Name:] Testen
+		\item [Beschreibung:] Der Quellcode außer GUI muss gut getestet werden.
+		\item [Motivation:] Damit das Projekt stabil und sicher läuft.
+		\item [Erfüllungskriterium:] Von Unit-Tests muss mindestens 70\% des Quellcodes bedeckt werden. GUI-Klassen sind aus der Anforderung ausgenommen.
+	\end{lhp}
+\end{description}
+
+\subsection{Anforderungen an technische und fachliche Unterstützung}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel5}
+		\item [Name:] Beispiel
+		\item [Beschreibung:] Es ist keine technische und fachliche Unterstützung des Systems geplant.
+		\item [Motivation:] Siehe \ref{fa:fortentwicklung}.
+		\item [Erfüllungskriterium:] Nicht anwendbar.
+	\end{lhp}
+\end{description}
+
+\subsection{Anforderungen an technische Kompatibilität}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel6}
+		\item [Name:] Lauffähigkeit
+		\item [Beschreibung:] Das Programm muss auf Java 8 oder höher lauffähig sein. Siehe \ref{beschr:implsprache}
+		\item [Motivation:] Das Projekt wird in Java implementiert.
+		\item [Erfüllungskriterium:] Siehe \ref{beschr:implsprache}
+	\end{lhp}
+\end{description}
+
+\section{Sicherheitsanforderungen}
+
+\subsection{Zugang}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel7}
+		\item [Name:] Projektzugang
+		\item [Beschreibung:] Nur die Gruppenmitglieder haben Zugriff auf das Projekt.
+		\item [Motivation:] Rechtliches. Siehe \ref{fa:recht}
+		\item [Erfüllungskriterium:] GitLab Zugang wird nur an diese Personen vergeben.
+	\end{lhp}
+\end{description}
+
+\subsection{Integrität}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel8}
+		\item [Name:] Technische Integrität
+		\item [Beschreibung:] Die aktuelle Version des Systems ist lauffähig und für den Anwender harmlos
+		\item [Motivation:] Benutzung der Software soll gefahrlos sein.
+		\item [Erfüllungskriterium:] Nur geteste und compilierbare Software wird in den master-Branch des GitLabs gemergt.
+	\end{lhp}
+\end{description}
+
+\subsection{Datenschutz/Privatsphäre}
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel9}
+		\item [Name:] Verarbeitung von Nachrichten
+		\item [Beschreibung:] Nur die letzte Chatnachricht wird auf dem Server gespeichert.
+		\item [Motivation:] Privatsphäre der Spieler muss geachtet werden.
+		\item [Erfüllungskriterium:] Keine Speicherung von Nutzerdaten.
+	\end{lhp}
+\end{description}
+
+\section{Prüfungsbezogene Anforderungen}
+
+Anforderungen, die sich auf die Prüfung/Audit vom System von SEP/MP-Tutoren oder von weiteren Instanzen beziehen.
+
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel10}
+		\item [Name:] Formate der Systemdokumentation
+		\item [Beschreibung:] Systemdokumantation muss in 2 Formen geführt werden (wenn anwendbar): Die Ausgangsdateien (\LaTeX, Dateien der Diagrammerstellungssoftware, Dateien der Grafiksoftware usw.) und PDFs.
+		\item [Motivation:] Optimierung der SEP/MP-Betreuung.
+		\item [Erfüllungskriterium:] Siehe Beschreibung.
+	\end{lhp}
+\end{description}
+
+\section{Kulturelle und politische Anforderungen}
+
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel11}
+		\item [Name:] Systemsprache
+		\item [Beschreibung:] Die Interfacesprache ist Deutsch.
+		\item [Motivation:] Synchronisation des Verständnisses von Teammitgliedern mit unterschiedlichen kulturellen Hintergründen.
+		\item [Erfüllungskriterium:] Die Benutzeroberfläche enthält nur deutsche Sprache.
+	\end{lhp}
+\end{description}
+
+\section{Rechtliche und standardsbezogene Anforderungen}
+
+
+\begin{description}[leftmargin=5em, style=sameline]	
+	\begin{lhp}{nf}{NF}{nfunk:beispiel12}
+		\item [Name:] Nicht rechtliche Anforderungen
+		\item [Beschreibung:] Keine relevanten rechtlichen Anforderungen bekannt.
+		\item [Motivation:] Siehe \ref{fa:fortentwicklung}.
+		\item [Erfüllungskriterium:] Nicht anwendbar.
+	\end{lhp}
+\end{description}

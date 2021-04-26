@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="gui.SpielerObjektImg">
+   <children>
+      <Label fx:id="spielerName" text="spieler" textFill="WHITE" />
+      <ImageView fx:id="userImage" fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/user_images/playericon3.png" />
+         </image>
+      </ImageView>
+   </children>
+</VBox>

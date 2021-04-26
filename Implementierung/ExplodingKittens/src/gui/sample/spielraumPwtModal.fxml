@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SpielraumPwtModal">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" AnchorPane.bottomAnchor="99.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="195.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="320.0" fitWidth="520.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/background2.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane>
+               <children>
+                  <VBox layoutX="53.0" prefHeight="300.0" prefWidth="400.0">
+                     <children>
+                        <Label prefHeight="132.0" prefWidth="360.0" text="Falls den Spielraum, den Sie beitreten möchten keinen Passwort hat, clicken sie  direkt auf beitreten." textAlignment="CENTER" textFill="#aa975f" wrapText="true">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="102.0" prefWidth="400.0">
+                           <children>
+                              <AnchorPane prefHeight="99.0" prefWidth="195.0">
+                                 <children>
+                                    <Label layoutX="86.0" prefHeight="51.0" prefWidth="80.0" text="Passwort" textAlignment="CENTER" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="109.0" prefWidth="212.0">
+                                 <children>
+                                    <TextField disable="true" layoutX="-40.0" layoutY="2.0" prefHeight="44.0" prefWidth="168.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="400.0">
+                           <children>
+                              <AnchorPane prefHeight="61.0" prefWidth="400.0">
+                                 <children>
+                                    <Button fx:id="neinAbrechen" cancelButton="true" layoutX="88.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#neinAbrechen" prefHeight="35.0" prefWidth="100.0" text="Abrechen" />
+                                    <Button defaultButton="true" layoutX="219.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#jaBeitreten" prefHeight="35.0" prefWidth="100.0" text="Beitreten" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children></Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AnmeldenController">
+   <children>
+      <Pane layoutX="146.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="720.0" fitWidth="620.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/background2.jpg" />
+               </image>
+            </ImageView>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="294.0" prefWidth="600.0">
+                     <children>
+                        <ImageView fitHeight="249.0" fitWidth="471.0" layoutX="104.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="22.399999999999977" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="23.0">
+                           <image>
+                              <Image url="@../img/logo1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="100.0" prefWidth="623.0">
+                     <HBox prefHeight="100.0" prefWidth="600.0">
+                        <children>
+                           <AnchorPane prefHeight="100.0" prefWidth="198.0">
+                              <Label layoutX="96.0" layoutY="39.0" prefHeight="46.0" prefWidth="128.0" text="Benutzername" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                           </AnchorPane>
+                           <AnchorPane prefHeight="100.0" prefWidth="242.0">
+                              <TextField fx:id="benutzernameField" layoutX="14.0" layoutY="39.0" onAction="#spielerAnmelden" prefHeight="46.0" prefWidth="250.0" promptText="Benutzername">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></TextField>
+                           </AnchorPane>
+                        </children>
+                     </HBox>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <HBox layoutY="-8.0" prefHeight="100.0" prefWidth="500.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-8.0">
+                        <children>
+                           <AnchorPane prefHeight="100.0" prefWidth="226.0">
+                              <children>
+                                 <Label layoutX="124.0" layoutY="39.0" prefHeight="46.0" prefWidth="88.0" text="Passwort" textFill="WHITE">
+                                    <font>
+                                       <Font size="14.0" />
+                                    </font></Label>
+                              </children>
+                           </AnchorPane>
+                           <AnchorPane prefHeight="100.0" prefWidth="361.0">
+                              <children>
+                                 <PasswordField fx:id="passwordField" layoutX="14.0" layoutY="40.0" onAction="#spielerAnmelden" prefHeight="45.0" prefWidth="250.0" promptText="Passwort" />
+                              </children></AnchorPane>
+                        </children>
+                     </HBox>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <VBox prefHeight="142.0" prefWidth="600.0">
+                        <children>
+                           <AnchorPane prefHeight="82.0" prefWidth="559.0">
+                              <children>
+                                 <Button alignment="CENTER" cancelButton="true" contentDisplay="CENTER" defaultButton="true" layoutX="245.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#spielerAnmelden" prefHeight="40.0" prefWidth="150.0" text="Anmelden" textAlignment="CENTER" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" />
+                                 <Label fx:id="fehlerMeldung" layoutX="223.0" layoutY="1.0" prefHeight="25.0" prefWidth="200.0" textFill="#eb8509" wrapText="true" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="177.0">
+                                    <font>
+                                       <Font name="System Bold Italic" size="12.0" />
+                                    </font></Label>
+                              </children>
+                           </AnchorPane>
+                           <AnchorPane prefHeight="61.0" prefWidth="528.0">
+                              <children>
+                                 <Hyperlink alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#sichRegistrieren" prefHeight="40.0" prefWidth="344.0" text="Noch kein Account ? jetzt regiestrieren!" textFill="#b7a351" underline="true" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="131.0" />
+                              </children>
+                           </AnchorPane>
+                        </children>
+                     </VBox>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SpielraumController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="940.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="0.0">
+          <children>
+              <ImageView fitHeight="796.0" fitWidth="1039.0" layoutX="-99.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="false">
+                  <image>
+                      <Image url="@../../gui/img/background2.jpg" />
+                  </image>
+              </ImageView>
+            <VBox layoutX="22.0" layoutY="51.0" prefHeight="143.0" prefWidth="535.0" spacing="10.0">
+               <children>
+                  <AnchorPane prefHeight="38.0" prefWidth="714.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <HBox fx:id="spielerListImg" prefHeight="96.0" prefWidth="507.0" spacing="15.0">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="77.0" layoutY="572.0">
+               <children>
+                  <VBox prefHeight="261.0" prefWidth="583.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="79.0" prefWidth="278.0" />
+                        <AnchorPane prefHeight="18.0" prefWidth="574.0" />
+                        <AnchorPane prefHeight="115.0" prefWidth="648.0">
+                           <children>
+                              <ScrollPane hbarPolicy="ALWAYS" layoutX="66.0" layoutY="-130.0" pannable="false" prefHeight="140.0" prefWidth="508.0" vbarPolicy="NEVER">
+                                 <content>
+                                    <HBox fx:id="karteObjektImg" prefHeight="126.0" prefWidth="508.0" spacing="7.0">
+                                    </HBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <StackPane layoutX="600.0" layoutY="250.0" prefHeight="150.0" prefWidth="150.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <VBox spacing="15.0" styleClass="vboxIsDaran" stylesheets="@style.css">
+                     <children>
+                        <Label alignment="TOP_CENTER" prefHeight="40.0" prefWidth="120.0" text="Spieler...." textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_CENTER" prefHeight="40.0" prefWidth="120.0" text="Ist Daran.." textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+                <Button fx:id="raumVerlassen" defaultButton="true" layoutX="747.0" layoutY="695.0" mnemonicParsing="false" onAction="#spielraumVerlassen" prefHeight="41.0" prefWidth="138.0" text="Spiel verlassen" />
+            <TitledPane layoutX="530.0" layoutY="79.0" prefHeight="436.0" prefWidth="376.0" text="Chat">
+               <content>
+                  <VBox prefHeight="427.0" prefWidth="376.0">
+                     <children>
+                        <ScrollPane prefHeight="376.0" prefWidth="355.0">
+                          <content>
+                              <ListView fx:id="chats" prefHeight="466.0" prefWidth="338.0" />
+                          </content>
+                        </ScrollPane>
+                        <HBox fillHeight="false" prefHeight="127.0" prefWidth="353.0">
+                           <children>
+                              <AnchorPane prefHeight="103.0" prefWidth="266.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="5.0" top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <TextArea fx:id="nachri" layoutY="29.0" prefHeight="87.0" prefWidth="265.0" text="Enter your Message here....&#10;&#10;" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="75.0" prefWidth="86.0">
+                                 <children>
+                                    <Button fx:id="nachrichtButton" defaultButton="true" layoutX="3.0" layoutY="77.0" mnemonicParsing="false" onAction="#nachrichtSchicken" prefHeight="31.0" prefWidth="80.0" text="Send" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+                <ImageView fitHeight="81.0" fitWidth="80.0" layoutX="39.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image fx:id="imgSpieler1" url="@../img/user_images/playericon1.png" />
+                    </image>
+            </ImageView>
+                <Label fx:id="labelSpieler1" layoutX="43.0" layoutY="517.0" prefHeight="17.0" prefWidth="89.0" text="Spieler...." textFill="WHITE" />
+            <Label fx:id="raumNameLabel" alignment="TOP_CENTER" layoutX="319.0" layoutY="11.0" prefHeight="40.0" prefWidth="290.0" text="Label" textFill="#fafafa">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Label>
+                <Label fx:id="anzahlKartenImStapel" alignment="TOP_CENTER" layoutX="239.0" layoutY="410.0" prefHeight="18.0" prefWidth="80.0" text=" xx karten" textAlignment="CENTER" textFill="WHITE" />
+            <AnchorPane layoutX="179.0" layoutY="243.0" prefHeight="167.0" prefWidth="138.0">
+               <children>
+                  <ImageView fx:id="kartenStapelImg" fitHeight="150.0" fitWidth="115.0" layoutX="29.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/main_deck_1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="kartenStapelImg1" fitHeight="150.0" fitWidth="115.0" layoutX="41.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#karteGezogen">
+                     <image>
+                        <Image url="@../img/main_deck_1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="349.0" layoutY="205.0" prefHeight="159.0" prefWidth="118.0">
+               <children>
+                  <ImageView fx:id="playedStapel" fitHeight="167.0" fitWidth="118.0" focusTraversable="true" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image fx:id="playy" url="@../img/game_cards/shuffle.jpg" />
+                     </image></ImageView>
+               </children>
+            </AnchorPane>
+          </children>
+      </Pane>
+   </children>
+</AnchorPane>

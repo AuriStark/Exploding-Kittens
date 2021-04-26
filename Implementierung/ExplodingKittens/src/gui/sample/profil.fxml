@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Profil">
+
+    <children>
+        <ImageView fitHeight="700.0" fitWidth="600.0" pickOnBounds="true">
+            <image>
+                <Image url="@../img/background2.jpg" />
+            </image>
+        </ImageView>
+        <VBox layoutX="52.0" layoutY="141.0" prefHeight="544.0" prefWidth="520.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <HBox prefHeight="99.0" prefWidth="520.0">
+                    <children>
+                        <AnchorPane>
+                            <children>
+                                <Button defaultButton="true" layoutY="9.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="75.0" text="zurück " />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="109.0" prefWidth="378.0">
+                            <children>
+                                <Text fill="WHITE" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profil" textAlignment="CENTER" wrappingWidth="363.23943424224854">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="135.0" prefHeight="35.0" prefWidth="520.0" spacing="70.0">
+                    <children>
+                        <Label fx:id="gespieltLabel1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="190.0" text="Benutzername" textFill="WHITE">
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                        </Label>
+                        <Label fx:id="benutzerName" layoutX="231.0" layoutY="10.0" prefHeight="60.0" prefWidth="190.0" text="_benutzerName" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin></Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="520.0" spacing="70.0">
+                    <children>
+                        <Label fx:id="gewonnenLabel" prefHeight="38.0" prefWidth="150.0" text=" Anzahl gewonnte Spiele :" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="50.0" />
+                            </HBox.margin></Label>
+                        <Label fx:id="anzahlGewonnen" layoutX="241.0" layoutY="10.0" prefHeight="35.0" prefWidth="198.0" text="1" textFill="WHITE" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="40.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="267.0" prefWidth="515.0" spacing="50.0">
+                    <children>
+                        <Label fx:id="gewonnenLabel11" prefHeight="63.0" prefWidth="198.0" text="Bestenliste" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="50.0" />
+                            </HBox.margin>
+                        </Label>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="282.0" prefWidth="385.0">
+                            <content>
+                                <TableView fx:id="bestenListeTabelle" prefHeight="306.0" prefWidth="288.0">
+                                    <columns>
+                                        <TableColumn fx:id="spielerNameCol" prefWidth="140.80004572868347" text="Spieler">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="spielerName" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn fx:id="spielerPunktCol" prefWidth="152.8000030517578" text="#gewonnte Spiele" >
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="spielerPunkt" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                </TableView>
+                            </content>
+                            <HBox.margin>
+                                <Insets top="20.0" />
+                            </HBox.margin>
+                        </ScrollPane>
+                    </children>
+                </HBox>
+                <HBox spacing="25.0">
+                    <children>
+                        <AnchorPane prefHeight="62.0" prefWidth="208.0">
+                            <children>
+                                <Button fx:id="passwortButton" layoutX="215.0" mnemonicParsing="false" onAction="#pwdändern" prefHeight="40.0" prefWidth="130.0" text="Passwort ändern" />
+                            </children>
+                            <HBox.margin>
+                                <Insets top="50.0" />
+                            </HBox.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="110.0" prefWidth="310.0">
+                            <children>
+                                <Button fx:id="loeschenButton" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#profilLöschen" prefHeight="40.0" prefWidth="130.0" text="Profil löschen" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

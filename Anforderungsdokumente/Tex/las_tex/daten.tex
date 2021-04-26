@@ -1,0 +1,29 @@
+
+\section{Produktdaten}\label{section:productdaten}
+
+Hier sollen die Daten genannt werden, die im System verwendet werden.
+
+\newcounter{ld}\setcounter{ld}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+	
+	\begin{lhp}{ld}{LD}{daten:benutzername}
+		\item [Name:] Benutzername*\footnote{``*'' bedeutet hier, dass die Daten in der Datenbank zu speichern sind}
+		\item [Fachliche Beschreibung:] Benutzername des Spielers
+		\item [Relevante Systemfunktionen:] \ref{funk:spielverw}, \ref{funk:zugriff}
+	\end{lhp}
+	
+	\begin{lhp}{ld}{LD}{daten:passwort}
+		\item [Name:] Passwort*
+		\item [Fachliche Beschreibung:] Passwort des Spielers
+		\item [Relevante Systemfunktionen:] \ref{funk:zugriff}
+	\end{lhp}
+
+	\begin{lhp}{ld}{LD}{daten:bestenliste}
+		\item [Name:] Bestenliste*
+		\item [Fachliche Beschreibung:] Lokal wird für den \textit{Spieler} gespeichert wie viele Spieler er gespielt und wie viele davon er gewonnen hat.
+										Das selbe gilt für alle anderen Spieler die in einem Spiel mit dem \textit{Spieler} mitgespielt haben.
+										Die Bestenliste verschafft also einen lokalen Überblick über die Spieler in denen \textit{Spieler} beteilgt war.
+		\item [Relevante Systemfunktionen:] \ref{funk:spielverw} \ref{funk:profil}
+	\end{lhp}
+\end{description}

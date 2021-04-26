@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SpielraumErstellen">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="500.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/background2.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#fafafa" layoutX="166.0" layoutY="36.5029296875" strokeType="OUTSIDE" strokeWidth="0.0" text="Spielraum erstellen" wrappingWidth="180.8671875" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="153.0" AnchorPane.topAnchor="16.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <VBox layoutX="60.0" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="151.0" spacing="30.0" AnchorPane.topAnchor="62.0">
+         <children>
+            <Label text="Name vom Spielraum :" textFill="#f5f5f5" />
+            <Label text="Passwort (optional) :" textFill="WHITE" />
+            <Label text="Anzahl der Spieler :" textFill="WHITE" />
+         </children>
+      </VBox>
+      <VBox layoutX="224.0" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="200.0" spacing="20.0" AnchorPane.topAnchor="62.0">
+         <children>
+            <TextField fx:id="raumNameField" prefHeight="36.0" prefWidth="171.0" />
+            <PasswordField fx:id="pwdField" disable="true" prefHeight="36.0" prefWidth="171.0" />
+            <ChoiceBox fx:id="anzahlSpielerBox" prefHeight="34.0" prefWidth="70.0" />
+         </children>
+      </VBox>
+      <HBox layoutX="133.0" layoutY="229.0" prefHeight="47.0" prefWidth="245.0" spacing="30.0">
+         <children>
+            <Button fx:id="abrechenButton" cancelButton="true" mnemonicParsing="false" onAction="#neienAbrechen" prefHeight="40.0" prefWidth="100.0" text="Abbrechen" />
+            <Button fx:id="erstellenButton" defaultButton="true" mnemonicParsing="false" onAction="#jaErstellen" prefHeight="40.0" prefWidth="101.0" text="Erstellen" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

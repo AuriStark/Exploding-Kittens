@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HideKitten">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="340.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/background2.jpg" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" prefHeight="486.0" prefWidth="339.0" spacing="12.0">
+         <children>
+            <HBox>
+               <children>
+                  <ImageView fitHeight="152.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/jetpack-kitten.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" right="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox>
+                     <children>
+                        <Label text="Hide The" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="39.0" prefWidth="101.0" text="Kitten!" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#dfaa17" />
+                                    <Stop color="WHITE" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button defaultButton="true" fx:id="ersteStelle" mnemonicParsing="false" onAction="#explodingOnTop" prefHeight="30.0" prefWidth="100.0" text="Erste" />
+            <Button defaultButton="true" fx:id="secondStelle" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#explodingOnSecond" prefHeight="30.0" prefWidth="100.0" text="Zweite" />
+            <Button defaultButton="true" fx:id="dritteStelle" layoutX="10.0" layoutY="186.0" mnemonicParsing="false" onAction="#explodingOnThird" prefHeight="30.0" prefWidth="100.0" text="Dritte" />
+            <Button defaultButton="true"  fx:id="vierteStelle" layoutX="10.0" layoutY="212.0" mnemonicParsing="false" onAction="#explodingOnFourth" prefHeight="30.0" prefWidth="100.0" text="Vierte" />
+            <Button defaultButton="true" fx:id="funfteStelle" layoutX="10.0" layoutY="237.0" mnemonicParsing="false" onAction="#explodingOnFifth" prefHeight="30.0" prefWidth="100.0" text="Fünfte" />
+            <Button defaultButton="true" fx:id="ganzUnten" layoutX="10.0" layoutY="263.0" mnemonicParsing="false" onAction="#explodingOnBottom" prefHeight="30.0" prefWidth="100.0" text="Ganz Unten" />
+            <Button defaultButton="true" fx:id="randomStelle" layoutX="10.0" layoutY="288.0" mnemonicParsing="false" onAction="#explodingRandom" prefHeight="30.0" prefWidth="100.0" text="Random" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

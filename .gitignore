@@ -1,0 +1,17 @@
+# IntelliJ
+**/.idea/*
+*.iml
+
+# LaTex
+*.log
+*.synctex*
+*.aux
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg
+*.out
+*.toc
+
+# Mac
+.DS_Store

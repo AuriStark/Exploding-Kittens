@@ -1,0 +1,188 @@
+%!TEX root = ./Pflichtenheft.tex
+
+\chapter{Systemtestfälle}
+
+Hier sollen verschiedene Szenarien beschrieben werden, mithilfe deren Sie später Systemtests ausführen und die erwarteten Ergebnisse darstellen.
+
+\newcounter{tf}\setcounter{tf}{10}
+
+\begin{description}[leftmargin=5em, style=sameline]
+
+\begin{lhp}{tf}{TF}{tests:registrieren}
+	\item [Name:] Spieler registrieren.
+	\item [Motivation:] Testet, ob ein neuer Spieler sich registrieren kann um ein Profil zu erhalten.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Anonyme Spieler sendet das Formular mit Name und Passwort ab} \\
+			$\implies$ Spieler wird in das Hauptmenu bewegt.
+			\item \textit{Bei Beendigung wird nichts registriert } \\
+			$\implies$ Spieler bleibt im aktuellen Zustand.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff} \ref{funk:start}
+	\item [Relevante Use Cases:] \ref{uc:register}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:anmelden}
+	\item [Name:] Spieler anmelden.
+	\item [Motivation:] Testet, ob die Anmeldung in das System korrekt funktioniert.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Zugriffsdaten sind vorhanden und richtig} \\
+			$\implies$ Spieler wird in das Hauptmenu bewegt.
+			\item \textit{Benutzername ist registriert, Passwort ist falsch} \\
+			$\implies$ Fehlermeldung wird angezeigt.
+			\item \textit{Benutzername ist nicht registriert} \\
+			$\implies$ Fehlermeldung wird angezeigt.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff} \ref{funk:start}
+	\item [Relevante Use Cases:] \ref{uc:login}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:abmelden}
+	\item [Name:] Spieler abmelden.
+	\item [Motivation:] Testet, ob die Abmeldung aus das System korrekt funktioniert.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Punkt wird ausgewählt} \\ $\implies$ System meldet den Spieler ab und bewegt ihn auf die Startseite.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff} \ref{funk:menu}
+	\item [Relevante Use Cases:] \ref{uc:logout}
+	
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Konto}
+	\item [Name:] Konto löschen.
+	\item [Motivation:] Testet, ob das Löschen des Benutzerkontos funktioniert.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Punkt wird ausgewählt} \\ $\implies$ System entfernt alle Daten des Spielers und bewegt ihn auf die Startseite.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff} \ref{funk:menu}
+	\item [Relevante Use Cases:] \ref{uc:delete}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Passwort}
+	\item [Name:] Passwort ändern.
+	\item [Motivation:] Testet, ob das Passwort änderbar ist.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{altes Passwort ist ungültig} \\ $\implies$ System zeigt Fehlermeldung und Spieler ist im Optionsmenü.
+			\item \textit{altes Passwort ist gültig } \\ $\implies$ System fragt nach einem neuen Passwort und es ändert das Passwort. Das alte Passwort kann für die Anmeldung nicht mehr verwendet werden.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:zugriff} \ref{funk:menu}
+	\item [Relevante Use Cases:] \ref{uc:change}	
+	\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Profil}
+	\item [Name:] Profil ansehen.
+	\item [Motivation:] Testet, ob der Spieler sich das Profil anschauen kann.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Bestenliste angefragt} \\ $\implies$ System bereitet die Daten aus der Datenbank auf und zeigt Bestenliste an.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:profil} \ref{funk:menu} \ref{funk:bestenliste}
+	\item [Relevante Use Cases:] \ref{uc:profil}	
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Spielregeln}
+	\item [Name:] Spielregeln anzeigen.
+	\item [Motivation:] Testet, ob die Spielregeln einsehbar sind.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Menupunkt wird ausgewählt} \\ $\implies$ Regeln sind vorhanden und werden erfolgreich geladen.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:menu}
+	\item [Relevante Use Cases:] \ref{uc:regeln}
+		
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:bots}
+	\item [Name:] Spiel gegen Computer.
+	\item [Motivation:] Testet, ob der Spieler einen Spiel gegen dem Computer spilen kann.
+	\item [Szenarien:] \hfill
+		\item Für verschiedene (evtl. zufällige) Zustände des Spiels: \\
+			\textit{Spiel ist in gewissem Zustand} \\ $\implies$ Computer spielt einen gültigen Zug.
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum} \ref{funk:bots}
+	\item [Relevante Use Cases:] \ref{uc:comp}
+		
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Spielraum(e)}
+	\item [Name:] Spielraum erstellen.
+	\item [Motivation:] Testet, ob das Erstellen eines Spielraumes möglich ist.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Menupunkt wird ausgewählt} \\ $\implies$ Spielraum wurde erfolgrich erstellt
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum} \ref{funk:menu}
+	\item [Relevante Use Cases:] \ref{uc:erstellen}
+		
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Spielraum(b)}
+	\item [Name:] Spielraum beitreten.
+	\item [Motivation:] Testet, ob der Spieler dem Spielraum eines anderen Spieler beitreten kann.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Menupunkt wird ausgewählt} \\ $\implies$ Spieler ist erfolgreich im Spielraum gelandet.
+		\end{enumerate}
+		\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:beitreten}
+		
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Spielraum(l)}
+	\item [Name:] Spielraum löschen.
+	\item [Motivation:] Testet,ob der Spielleiter den Spiel löschen kann.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Menupunkt wird ausgewählt} \\ $\implies$ Spielraum wurde erfolgreich gelöscht.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:spielraumdelete}
+
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Nachricht}
+	\item [Name:] Nachricht schicken.
+	\item [Motivation:] Testet,ob der Spieler in den Chat eines Spielraums schreiben kann.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spielraum ist erstellt} \\ $\implies$ Nachricht wird erfolgreich versendet und kann erfolgreich von anderen Spielern gelesen werden.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielraum} \ref{funk:chat}
+	\item [Relevante Use Cases:] \ref{uc:chat}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Start}
+	\item [Name:] Spiel starten.
+	\item [Motivation:] Testet, ob das Starten des Spiels zwischen der Spielleiter und seine Freunde möglich ist.
+	\item [Szenarien:] \hfill
+		\begin{enumerate}
+			\item \textit{Spielraum enthält mindestens 2 Spieler} \\ $\implies$ Spiel wird gestartet.
+			\item \textit{Spielraum enthält weniger als 2 Spieler} \\ $\implies$ Spiel wird nicht gestartet.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw} \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:starten}
+\end{lhp}
+
+\begin{lhp}{tf}{TF}{tests:Karte}
+	\item [Name:] Karte spielen.
+	\item [Motivation:] Testet, ob der Spieler Karten spielen kann.
+	\item [Szenarien:] \hfill
+		Für verschiedene (evtl. zufällige) Zustände des Spiels und verschiedene (evtl. zufällige Karten):
+		\begin{enumerate}
+			\item \textit{Spiel ist in bestimmtem Zustand} \\
+			$\implies$ Folgezustand wird erreicht und ist konsistent. \\
+			Wenn \textit{Spielraum enthält andere Spieler} außerdem \\
+			$\implies$ andere Spieler bekommen den richtigen Folgezustand gesendet.
+		\end{enumerate}
+	\item [Relevante Systemfunktionen:] \ref{funk:spielverw} \ref{funk:spielraum}
+	\item [Relevante Use Cases:] \ref{uc:karten}
+\end{lhp}
+
+\end{description}
+
+
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Hauptmenu">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="false">
+               <image>
+                  <Image url="@../img/background2.jpg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="700.0" prefWidth="600.0" spacing="30.0">
+               <children>
+                  <AnchorPane prefHeight="142.0" prefWidth="500.0">
+                     <children>
+                        <Label layoutX="221.0" layoutY="37.0" prefHeight="82.0" prefWidth="200.0" text="Hauptmenu" textFill="WHITE" AnchorPane.leftAnchor="221.0" AnchorPane.rightAnchor="179.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="47.0" prefWidth="200.0">
+                     <children>
+                        <Button defaultButton="true" layoutX="157.0" layoutY="11.0" mnemonicParsing="false" onAction="#spielGegenFreunde" prefHeight="50.0" prefWidth="200.0" text="Spiel gegen Freunde" textAlignment="CENTER" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="492.0">
+                     <children>
+                        <Button cancelButton="true" defaultButton="true" layoutX="200.0" layoutY="8.0" mnemonicParsing="false" onAction="#spielGegenComputer" prefHeight="50.0" prefWidth="200.0" text="Spiel gegen Computer" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="210.0" prefHeight="63.0" prefWidth="600.0">
+                     <children>
+                        <Button defaultButton="true" layoutX="200.0" mnemonicParsing="false" onAction="#sieheRegeln" prefHeight="50.0" prefWidth="200.0" text="Regeln" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="65.0" prefHeight="46.0" prefWidth="500.0">
+                     <children>
+                        <Button defaultButton="true" layoutX="154.0" layoutY="-11.0" mnemonicParsing="false" onAction="#sieheProfil" prefHeight="50.0" prefWidth="200.0" text="Profil" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="264.0" prefHeight="44.0" prefWidth="500.0">
+                     <children>
+                        <Button defaultButton="true" layoutX="206.0" layoutY="3.0" mnemonicParsing="false" onAction="#spielerAbmelden" prefHeight="50.0" prefWidth="200.0" text="Abmelden" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
+                     </children></AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

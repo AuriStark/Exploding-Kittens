@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Regeln">
+   <children>
+      <ScrollPane layoutX="26.0" layoutY="46.0" prefHeight="700.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="zuruckButon" defaultButton="true" layoutX="24.0" layoutY="18.0" mnemonicParsing="false" onAction="#zuruck" text="zurück" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="20.0" />
+                  <Text layoutX="265.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Regeln" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="272.82763671875" AnchorPane.topAnchor="20.0">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <VBox layoutX="40.0" layoutY="85.0" prefHeight="200.0" prefWidth="530.0" spacing="10.0" AnchorPane.leftAnchor="40.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="So funktioniert' s :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextFlow lineSpacing="1.0" prefHeight="60.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Es wird reihum eine Karte vom Kartenstapel gezogen. Wenn ein Spieler eine &quot;Exploding&quot; Karte zieht, explodiert der Spieler und ist somit aus dem Spiel raus. Das Spiel endet sobald nur noch en Spieler lebt." />
+                           </children>
+                        </TextFlow>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zug :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextFlow lineSpacing="1.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entweder man passt  oder man spielt eine Handkarte, indem man diese offen auf den Ablagestapel legt. Man beendet seinen Zug indem man eine Karte vom Kartenstapel zieht." />
+                           </children>
+                        </TextFlow>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Spielbeginn :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextFlow lineSpacing="1.0" prefHeight="50.0" prefWidth="60.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jeder Spieler kriegt eine &quot;Entschärfung&quot; Karte , und 4 weitere beliebige Handkarten. Die restlichen &quot;Entschärfung&quot; Karten werden in den Kartenstapel gelegt. Danach werden genau so viele &quot;Exploding&quot; Karten in den Stapel gelegt wie Anzahl der Spieler.  Dann kann das Spiel auch schon beginnen." wrappingWidth="509.38671875" />
+                           </children>
+                        </TextFlow>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Exploding Kitten :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="40.0">
+                           <children>
+                              <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/game_cards/ExplodingKittenCard4.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextFlow lineSpacing="1.0" prefHeight="200.0" prefWidth="400.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wenn der Spieler keine &quot;Entschärfung&quot; mehr hat, ist das Spiel für ihn beendet. Die restlichen Handkarten kommen auf den Ablagestapel." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entschärfung (6 Karten) : " underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="40.0">
+                           <children>
+                              <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/game_cards/DefuseCard1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextFlow lineSpacing="1.0" prefHeight="200.0" prefWidth="300.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wenn man eine &quot;Exploding&quot; zieht kann man diese Karte spielen und man stirbt dann nicht. Danach gelangt die gespielte Karte auf den Ablagestapel und die &quot;Exploding&quot; Karte kann man an eine gewünschte Stelle im Kartenstapel zurücklegen." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nö! (5 Karten) :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="40.0">
+                           <children>
+                              <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/game_cards/nope-1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextFlow lineSpacing="1.0" prefHeight="200.0" prefWidth="380.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Diese Karte kann jederzeit gelegt werden, also auch wenn man nicht am Zug ist. Ihre Fähigkeit ist es andere Karten außere Kraft zu setzen, ausgenommen davon sind Die &quot;Exploding&quot; und &quot;Entschärfung&quot; Karten. Wenn man ein Nö! auf ein Mö! legt, wird daraus ein Doch." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Angriff (4 Karten) :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="40.0">
+                           <children>
+                              <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/game_cards/AttackCard1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextFlow lineSpacing="1.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wenn man die Karte gespielt hat, wird der eigene Zug direkt beendet ohne, dass man eine Karte vom Kartenstapel ziehen muss. Desweiteren zwingt man den nächsten Spieler dazu zwei Karten vom Kartenstapel zu ziehen." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hops! (4 Karten) :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="40.0">
+                           <children>
+                              <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/game_cards/skip-1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextFlow prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Der Zug wird direkt beendet ohne,dass man eine Karte ziehen muss." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wunsch (4 Karten) :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="40.0">
+                           <children>
+                              <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/game_cards/favor-1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextFlow prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Du darfst dir einen Spieler aussuchen, welcher dir eine Karte seiner Wahl geben muss." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mischen (4 Karten) :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="40.0">
+                           <children>
+                              <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/game_cards/shuffle-2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextFlow prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Der Kartenstapel wird durchgemischt." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blick in die Zukunft  (5 Karten) :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="40.0">
+                           <children>
+                              <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/game_cards/future-2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextFlow prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="man kann sich die drei obersten Karten im Kartenstapel angucken." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Katzen Karten (4 von jeder Art) :" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="40.0">
+                           <children>
+                              <ImageView fitHeight="120.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/game_cards/cat-2.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TextFlow prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wenn man zwei gleiche Katzen Karten hat, darf man sich eine Beliebige Karte bei einem Spieler ziehen." />
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

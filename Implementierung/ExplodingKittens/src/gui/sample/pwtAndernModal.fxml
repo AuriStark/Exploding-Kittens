@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PasswortAndern">
+   <children>
+      <ImageView fitHeight="320.0" fitWidth="520.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/background2.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="248.0" layoutY="80.0" prefHeight="118.0" prefWidth="201.0" spacing="20.0" AnchorPane.leftAnchor="248.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <PasswordField fx:id="altespwd" />
+            <PasswordField fx:id="neuespwd" />
+            <PasswordField fx:id="pwdwiederholen" />
+         </children>
+      </VBox>
+      <VBox layoutX="74.0" layoutY="81.0" prefHeight="117.0" prefWidth="166.0" spacing="30.0" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="81.0">
+         <children>
+            <Label text="Altes Passwort :" textFill="WHITE" />
+            <Label text="Neues Passwort :" textFill="WHITE" />
+            <Label text="Passwort wiederholen :" textFill="WHITE" />
+         </children>
+      </VBox>
+      <Text fill="WHITE" layoutX="192.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passwort ändern " AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="23.4970703125">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Button fx:id="abbrechenButton" cancelButton="true" layoutX="130.0" layoutY="226.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#abbrechen" prefHeight="35.0" prefWidth="103.0" text="Abbrechen" />
+      <Button fx:id="bestaetigenButton" defaultButton="true" layoutX="275.0" layoutY="226.0" mnemonicParsing="false" onAction="#bestätigen" prefHeight="35.0" prefWidth="90.0" text="Bestätigen" />
+   </children>
+</AnchorPane>
